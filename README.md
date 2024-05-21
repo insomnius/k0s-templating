@@ -6,6 +6,12 @@ Install metallb for loadbalancing kubernetes to host, make sure you have an IP f
 
 ### 1. Installing metallb native
 
+Create  cluster config
+
+```
+kubectl apply -f https://raw.githubusercontent.com/insomnius/k0s-templating/master/metallb/cluster-config.yaml
+```
+
 Apply the native configuration
 
 ```
@@ -15,5 +21,5 @@ kubectl apply -f https://raw.githubusercontent.com/insomnius/k0s-templating/mast
 Apply pool config, change the IP address based on your available IPs.
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/insomnius/k0s-templating/master/metallb/metallb-l2pool-production.yaml -e
+kubectl apply -f https://raw.githubusercontent.com/insomnius/k0s-templating/master/metallb/metallb-l2pool-production.yaml
 ```
